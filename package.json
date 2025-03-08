@@ -1,6 +1,6 @@
 {
 	"name": "hono-cloudfront",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Hono middleware for to use with Cloudfront in front of a AWS Lambda",
 	"author": "JA Castro <@ubinatus>",
 	"homepage": "https://github.com/ubinatus/hono-cloudfront#readme",
@@ -9,7 +9,13 @@
 	},
 	"repository": "github:ubinatus/hono-cloudfront",
 	"license": "MIT",
-	"keywords": ["hono", "cloudfront", "lambda", "middleware", "typescript"],
+	"keywords": [
+		"hono",
+		"cloudfront",
+		"lambda",
+		"middleware",
+		"typescript"
+	],
 	"type": "module",
 	"exports": {
 		".": {
@@ -17,7 +23,9 @@
 			"import": "./dist/index.js"
 		}
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"engines": {
 		"node": ">=18"
 	},
@@ -48,6 +56,9 @@
 		"vitest": "^3.0.8"
 	},
 	"pnpm": {
-		"onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
+		"onlyBuiltDependencies": [
+			"@biomejs/biome",
+			"esbuild"
+		]
 	}
 }
