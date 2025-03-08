@@ -2,7 +2,14 @@
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
 	"files": {
 		"maxSize": 1572864,
-		"ignore": ["node_modules", "dist", ".cache", "coverage", "html"]
+		"ignore": [
+			"node_modules",
+			"dist",
+			".cache",
+			"coverage",
+			"html",
+			"package.json"
+		]
 	},
 	"vcs": {
 		"enabled": true,
