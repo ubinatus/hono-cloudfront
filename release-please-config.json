@@ -4,5 +4,13 @@
 	"include-component-in-tag": false,
 	"packages": {
 		".": {}
-	}
+	},
+	"plugins": [
+		{
+			"type": "manifest",
+			"postPublish": {
+				"command": "pnpm lint:fix && git add . && git commit -m 'chore: fix formatting' && git push"
+			}
+		}
+	]
 }
