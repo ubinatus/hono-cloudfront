@@ -4,6 +4,31 @@
 
 A Hono middleware for extracting CloudFront viewer information from request headers when using AWS Lambda@Edge or Lambda Function URLs behind CloudFront.
 
+## Why?
+
+When deploying Hono applications on AWS Lambda behind CloudFront, you get access to valuable viewer information through CloudFront's headers. These headers provide details about:
+
+- 📍 **Geolocation**: Country, city, region, coordinates, and timezone
+- 📱 **Device Detection**: Mobile, tablet, desktop, iOS, Android, and smart TV
+- 🌐 **Network Information**: IP address, ASN (Autonomous System Number)
+- 🔒 **Protocol Details**: HTTP version and protocol used
+
+However, working with these headers directly can be challenging:
+
+- ⚠️ Headers are only available if properly configured in CloudFront
+- 🤯 Different header formats for different types of information
+- 😕 No type safety when accessing header values
+- 🐌 Redundant header extraction code across routes
+- 🔍 Hard to track which headers are actually needed
+
+This middleware solves these problems by:
+
+1. **Simplifying Access**: Convert raw headers into a structured object with proper types
+2. **Optimizing Performance**: Only extract the headers you need
+3. **Ensuring Type Safety**: Full TypeScript support with configuration-based type inference
+4. **Improving DX**: IDE autocompletion and compile-time checks
+5. **Reducing Errors**: Consistent header handling with proper null checks
+
 ## Features
 
 - 🎯 **Selective Header Extraction**: Configure exactly which headers you want to extract
@@ -191,7 +216,8 @@ app.get('/', (c) => {
     },
     device: {
       isMobile: viewer.isMobileViewer,  // ✅ boolean | undefined
-      isTablet: viewer.isTabletViewer   // ✅ boolean | undefined
+      isTablet: viewer.isTabletViewer,   // ✅ boolean | undefined
+      isDesktop: viewer.isDesktopViewer  // ✅ boolean | undefined
     },
     // @ts-expect-error - Property does not exist
     isDesktop: viewer.isDesktopViewer   // ❌ Not included in config
