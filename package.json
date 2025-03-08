@@ -1,0 +1,53 @@
+{
+	"name": "hono-cloudfront",
+	"version": "0.1.0",
+	"description": "Hono middleware for to use with Cloudfront in front of a AWS Lambda",
+	"author": "JA Castro <@ubinatus>",
+	"homepage": "https://github.com/ubinatus/hono-cloudfront#readme",
+	"bugs": {
+		"url": "https://github.com/ubinatus/hono-cloudfront/issues"
+	},
+	"repository": "github:ubinatus/hono-cloudfront",
+	"license": "MIT",
+	"keywords": ["hono", "cloudfront", "lambda", "middleware", "typescript"],
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": ["dist"],
+	"engines": {
+		"node": ">=18"
+	},
+	"packageManager": "pnpm@9.15.5",
+	"scripts": {
+		"build": "tsup src/index.ts --format esm --dts",
+		"lint": "biome check",
+		"lint:fix": "biome check --fix --unsafe",
+		"prepublishOnly": "pnpm run build",
+		"test": "vitest run --coverage",
+		"test:watch": "vitest --watch",
+		"test:coverage": "vitest run --coverage",
+		"test:ui": "vitest --ui",
+		"typecheck": "tsc"
+	},
+	"peerDependencies": {
+		"hono": "^4.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^22.13.9",
+		"@vitest/coverage-v8": "^3.0.8",
+		"@vitest/ui": "^3.0.8",
+		"hono": "^4.7.4",
+		"tsup": "^8.4.0",
+		"tsx": "^4.19.3",
+		"typescript": "^5.8.2",
+		"vitest": "^3.0.8"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
+	}
+}

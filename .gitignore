@@ -1,0 +1,17 @@
+# Logs
+logs
+*.log
+.pnpm-debug.log*
+
+node_modules
+dist
+
+.idea
+coverage/
+html/
+test-results/
+.DS_Store
+.npmrc
+
+# temporarily
+examples
