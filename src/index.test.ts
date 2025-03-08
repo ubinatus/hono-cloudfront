@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import { describe, expect, it } from "vitest";
+
 import { cloudFrontViewer } from "./index";
 
 describe("cloudFrontViewer middleware", () => {
