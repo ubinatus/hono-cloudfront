@@ -1,6 +1,6 @@
 {
 	"name": "hono-cloudfront",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"description": "Hono middleware for to use with Cloudfront in front of a AWS Lambda",
 	"author": "JA Castro <@ubinatus>",
 	"homepage": "https://github.com/ubinatus/hono-cloudfront#readme",
