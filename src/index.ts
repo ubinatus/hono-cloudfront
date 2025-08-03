@@ -1,7 +1,7 @@
-export * from "./types/config";
-export * from "./types/viewer-info";
-export * from "./types/inference";
 export * from "./middleware";
+export * from "./types/config";
+export * from "./types/inference";
+export * from "./types/viewer-info";
 
 import type { CloudFrontViewerInfo } from "./types/viewer-info";
 

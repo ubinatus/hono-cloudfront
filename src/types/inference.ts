@@ -1,5 +1,5 @@
-import type { CloudFrontViewerConfig } from "./config";
 import type {
+	CloudFrontViewerConfig,
 	DeviceTypeConfig,
 	LocationConfig,
 	NetworkConfig,
