@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.6](https://github.com/ubinatus/hono-cloudfront/compare/v0.2.5...v0.2.6) (2025-09-21)
+
+
+### Miscellaneous Chores
+
+* release 0.2.6 ([4e2837f](https://github.com/ubinatus/hono-cloudfront/commit/4e2837fbf03efeccedf13aa30c6f49418801f38d))
+
 ## [0.2.5](https://github.com/ubinatus/hono-cloudfront/compare/v0.2.4...v0.2.5) (2025-08-03)
 
 

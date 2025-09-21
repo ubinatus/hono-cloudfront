@@ -1,6 +1,6 @@
 {
 	"name": "hono-cloudfront",
-	"version": "0.2.5",
+	"version": "0.2.6",
 	"description": "A Hono middleware for extracting CloudFront viewer information when using AWS Lambda@Edge or Lambda Function URLs behind CloudFront.",
 	"author": "JA Castro <@ubinatus>",
 	"homepage": "https://github.com/ubinatus/hono-cloudfront#readme",
