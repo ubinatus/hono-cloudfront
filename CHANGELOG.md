@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.7](https://github.com/ubinatus/hono-cloudfront/compare/v0.2.6...v0.2.7) (2026-10-15)
+
+
+### Bug Fixes
+
+* **deps:** upgrade dependencies and modernize build ([4051cd4](https://github.com/ubinatus/hono-cloudfront/commit/4051cd47a2c2a1040e1c6425a39785f4f85cd7e0))
+
 ## [0.2.6](https://github.com/ubinatus/hono-cloudfront/compare/v0.2.5...v0.2.6) (2025-09-21)
 
 
