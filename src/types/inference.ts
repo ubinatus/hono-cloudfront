@@ -4,8 +4,8 @@ import type {
 	LocationConfig,
 	NetworkConfig,
 	ProtocolConfig,
-} from "./config";
-import type { CloudFrontViewerInfo } from "./viewer-info";
+} from "./config.js";
+import type { CloudFrontViewerInfo } from "./viewer-info.js";
 
 /**
  * Helper type to extract enabled properties from a category config

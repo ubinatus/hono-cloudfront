@@ -1,7 +1,7 @@
 import type { MiddlewareHandler } from "hono";
-import type { CloudFrontViewerConfig } from "./types/config";
-import type { CloudFrontViewerInfo } from "./types/viewer-info";
-import { isConfigEnabled, toBooleanOrUndefined } from "./utils/headers";
+import type { CloudFrontViewerConfig } from "./types/config.js";
+import type { CloudFrontViewerInfo } from "./types/viewer-info.js";
+import { isConfigEnabled, toBooleanOrUndefined } from "./utils/headers.js";
 
 /**
  * Hono middleware that extracts CloudFront viewer information from request headers

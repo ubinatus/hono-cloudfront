@@ -1,9 +1,9 @@
-export * from "./middleware";
-export * from "./types/config";
-export * from "./types/inference";
-export * from "./types/viewer-info";
+export * from "./middleware.js";
+export * from "./types/config.js";
+export * from "./types/inference.js";
+export * from "./types/viewer-info.js";
 
-import type { CloudFrontViewerInfo } from "./types/viewer-info";
+import type { CloudFrontViewerInfo } from "./types/viewer-info.js";
 
 declare module "hono" {
 	interface ContextVariableMap {

@@ -9,6 +9,7 @@ dist
 .idea
 coverage/
 html/
+.vitest/
 test-results/
 .DS_Store
 .npmrc

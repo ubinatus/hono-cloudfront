@@ -318,4 +318,28 @@ describe("cloudFrontViewer middleware", () => {
 			address: "198.51.100.10:46532",
 		});
 	});
+
+	it("should omit unselected headers when only other category fields are enabled", async () => {
+		const app = new Hono();
+		app.use(
+			cloudFrontViewer({
+				network: { asn: true },
+				location: { countryRegion: true },
+				protocol: { httpVersion: true },
+				deviceType: { smartTv: true },
+			}),
+		);
+		app.get("/", (c) => c.json(c.get("cloudFrontViewer")));
+
+		const res = await app.request("/", {
+			headers: createTestHeaders(),
+		});
+
+		expect(await res.json()).toEqual({
+			asn: "12345",
+			countryRegion: "LMA",
+			httpVersion: "2.0",
+			isSmartTvViewer: false,
+		});
+	});
 });
